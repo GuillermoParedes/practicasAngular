@@ -1,0 +1,24 @@
+{
+  "name": "PracticasAngular",
+  "version": "1.0.0",
+  "description": "Practicas con el Framework de AngularJS, para el manejo del FrontEnd ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GuillermoParedes/practicasAngular.git"
+  },
+  "keywords": [
+    "Angular",
+    "Javascript",
+    "MVC"
+  ],
+  "author": "Guillermo David Paredes Torrez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GuillermoParedes/practicasAngular/issues"
+  },
+  "homepage": "https://github.com/GuillermoParedes/practicasAngular"
+}
