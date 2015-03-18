@@ -22,7 +22,10 @@
                 </span> 
             </li>
         </ul>
-  
+        <form ng-submit="agregarTarea()">
+            <input type="text" size="30" placeholder="Agregar una nueva tarea" ng-model="textoNuevoTarea">
+            <button class="btn btn-primary" type="submit">Agregar</button>
+        </form>
         
     </div>
 </body>
