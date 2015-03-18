@@ -22,24 +22,45 @@
       <div class="panel-heading">
         <div class="input-group">
           <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-          <input type="text" class="form-control" placeholder="Buscare Empleado">
+          <input type="text" class="form-control" placeholder="Buscare Empleado" ng-model="buscar">
         </div>
       </div>
       <div class="panel-body">
         <table class="table table-striped">
           <thead>
           <tr>
+            <th>
+                <a href="" ng-click="ordenarPor('nombre')">Nombre</a>
+                <span class="caret" style="cursor:pointer" ng-click="ordenarPor('-nombre')"></span>
             </th>
-            <th>Apellido Paterno</th>
-            <th>Apellido Materno</th>
-            <th>Primer dia de trabajo</th>
-            <th>Telefono</th>
-            <th>Salario</th>
-            <th>Bono</th>
+            <th>  
+                <a href="" ng-click="ordenarPor('paterno')">Apellido Paterno</a>
+                <span class="caret" style="cursor:pointer" ng-click="ordenarPor('-paterno')"></span>
+            </th>
+            <th> 
+                <a href="" ng-click="ordenarPor('materno')">Apellido Materno</a>
+                <span class="caret" style="cursor:pointer" ng-click="ordenarPor('-materno')"></span>
+            </th>
+            <th> 
+                <a href="" ng-click="ordenarPor('primerDia')">Primer dia de trabajo</a>
+                <span class="caret" style="cursor:pointer" ng-click="ordenarPor('-primerDia')"></span>
+            </th>
+            <th> 
+                <a href="" ng-click="ordenarPor('telefono')">Telefono</a>
+                <span class="caret" style="cursor:pointer" ng-click="ordenarPor('-telefono')"></span>
+            </th>
+            <th> 
+                <a href="" ng-click="ordenarPor('salario')">Salario</a>
+                <span class="caret" style="cursor:pointer" ng-click="ordenarPor('-salario')"></span>
+            </th>
+            <th> 
+                <a href="" ng-click="ordenarPor('bono')">Bono</a>
+                <span class="caret" style="cursor:pointer" ng-click="ordenarPor('-bono')"></span>
+            </th>
           </tr>
           </thead>
           <tbody>
-          <tr ng-repeat="empleado in empleados">
+          <tr ng-repeat="empleado in empleados | orderBy:ordenSeleccionado | filter:buscar">
             <td>{{empleado.nombre}}</td>
             <td>{{empleado.paterno | uppercase}}</td>
             <td>{{empleado.materno | lowercase}}</td>

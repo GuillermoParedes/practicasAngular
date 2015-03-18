@@ -33,4 +33,7 @@ var app = angular.module("myApp",[]);
       }
     ];
 
+$scope.ordenarPor = function(orden){
+    $scope.ordenSeleccionado = orden;
+}
 });
