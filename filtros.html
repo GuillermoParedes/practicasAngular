@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Free Angular tutorials">
+	<meta name="keywords" content="HTML,CSS,JavaScript, AngularJS, Bootstrap,MVC">
+	<meta name="author" content="Guillermo David Paredes Torrez">
+	<title>Angular JS</title>
+	<link rel="stylesheet" href="libs/bootstrap.css.map">
+	<link rel="stylesheet" href="libs/bootstrap.css">
+	
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="libs/angular.min.js"></script>
+	<script src="assets/js/filtros.js"></script>
+</head>
+<body ng-app="myApp">
+    <div  class="container" ng-controller="ControladorFiltros">
+    <h1>Filtros Nativos de AngularJS</h1>
+    <hr>
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+          <input type="text" class="form-control" placeholder="Buscare Empleado">
+        </div>
+      </div>
+      <div class="panel-body">
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            </th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Primer dia de trabajo</th>
+            <th>Telefono</th>
+            <th>Salario</th>
+            <th>Bono</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr ng-repeat="empleado in empleados">
+            <td>{{empleado.nombre}}</td>
+            <td>{{empleado.paterno}}</td>
+            <td>{{empleado.materno}}</td>
+            <td>{{empleado.primerDia}}</td>
+            <td>{{empleado.telefono}}</td>
+            <td>{{empleado.salario}}</td>
+            <td>% {{empleado.bono}}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html> 
+   
+
+  
