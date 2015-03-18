@@ -11,12 +11,12 @@
 	<script src="libs/angular.min.js"></script>
 </head>
 <body>
-    <h1> PRACTICAS ANGULAR JS</h1>
-	<div ng-app>
-	<label for="">Nombre :</label>
-	<input type="text" placeholder="Escribe tu Nombre Aqui" ng-model="nombre" />
-	<hr>
-	<h2>Hola ! {{nombre }}</h2>
+    <div ng-app>
+        <label for="">Nombre :</label>
+        <input type="text" placeholder="Escribe tu Nombre Aqui" ng-model="nombre" />
+        <input type="text" placeholder="Escribe el tipo de Color" ng-model="color" />
+        <hr>
+        <h2 class="text-{{color}}">Hola ! {{nombre }}</h2>
 	</div>
 </body>
 </html> 
